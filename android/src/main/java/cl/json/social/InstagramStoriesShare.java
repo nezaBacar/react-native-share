@@ -92,6 +92,7 @@ public class InstagramStoriesShare extends SingleShareIntent {
                 ShareFile backgroundAsset  = new ShareFile(options.getString("backgroundVideo"), "video/*", "background", useInternalStorage, this.reactContext);
                 this.intent.setDataAndType(backgroundAsset.getURI(), backgroundAsset.getType());
             }
+
             this.intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         }
 
